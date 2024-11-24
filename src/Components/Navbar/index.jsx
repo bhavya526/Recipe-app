@@ -72,7 +72,7 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
-              to="/recipe"
+              to="/recipes"
               className={({ isActive }) =>
                 `duration-300 flex gap-1 justify-center items-center ${
                   isActive
