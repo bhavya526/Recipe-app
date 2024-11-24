@@ -3,15 +3,24 @@
 @tailwind utilities;
 
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .spinner {
-    border-top-color: #3498db;
-    animation: spin 1s linear infinite;
+  border-top-color: #3498db;
+  animation: spin 1s linear infinite;
 }
 
-html{
-    font-family: cursive !important;
+html {
+  font-family: cursive !important;
 }
 
+@media (min-width: 1024px) {
+  .container {
+    max-width: 75% !important;
+  }
+}
