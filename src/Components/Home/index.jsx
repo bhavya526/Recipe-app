@@ -63,13 +63,14 @@ const Home = () => {
         {loading ? (
           <span className=""></span>
         ) : recipeList && recipeList.length > 0 ? (
-          <a
-            href="/recipes"
-            className="flex justify-end mb-5 font-cursive"
-            style={{ fontFamily: "cursive" }}
-          >
-            View More Recipes
-          </a>
+          <NavLink to="/recipes" className="text-end mb-2">
+            <p
+              className="flex justify-end mb-5 font-cursive"
+              style={{ fontFamily: "cursive" }}
+            >
+              View More Recipes
+            </p>
+          </NavLink>
         ) : (
           // Limit to top 6 items
           <p className="lg:text-3xl font-bold text-center">
