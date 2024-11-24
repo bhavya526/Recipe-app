@@ -21,6 +21,6 @@ html {
 
 @media (min-width: 1024px) {
   .container {
-    max-width: 75% !important;
+    max-width: 85% !important;
   }
 }
