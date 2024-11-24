@@ -2,6 +2,7 @@ import { useContext, useEffect } from "react";
 import { GlobalContext } from "../Context";
 import RecipeItem from "../RecipeItem";
 import banner from "../../assets/banner.jpg";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   const { loading, recipeList, setRecipeList, setLoading } =
@@ -30,11 +31,11 @@ const Home = () => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col  justify-center  backdrop-blur bg-black bg-opacity-50 text-white px-5 py-2">
           “If more of us valued food and cheer and song above hoarded gold, it
           would be a merrier world."
-          <a href="/recipes" className="text-end mb-2">
+          <NavLink to="/recipes" className="text-end mb-2">
             <button className="bg-white text-black px-4 py-1 mt-3  bg-opacity-50">
               Recipes
             </button>
-          </a>
+          </NavLink>
         </div>
       </div>
 
