@@ -23,7 +23,7 @@ const Home = () => {
     fetchInitialData();
   }, []);
   return (
-    <div>
+    <div className="px-[20px]">
       <div className="min-h-[500px] container mx-auto pt-5 pb-5 mb-5 relative">
         <img src={banner} className="w-full h-full absolute object-cover" />
 
@@ -39,7 +39,10 @@ const Home = () => {
       </div>
 
       <div className="container mx-auto pt-[40px]">
-        <p className="text-center text-[24px] font-medium font-cursive"  style={{fontFamily:"cursive"}}>
+        <p
+          className="text-center text-[24px] font-medium font-cursive"
+          style={{ fontFamily: "cursive" }}
+        >
           Our Recepies
         </p>
         <div className="container mx-auto flex flex-wrap justify-center gap-10 py-8">
@@ -55,19 +58,23 @@ const Home = () => {
               No Recipes Found. Try searching..
             </p>
           )}
-
-         
         </div>
         {loading ? (
-            <span className=""></span>
-          ) : recipeList && recipeList.length > 0 ? (
-            <a href="/recipe" className="flex justify-end mb-5 font-cursive"  style={{fontFamily:"cursive"}}>View More Recipes</a>
-          ) : (
-            // Limit to top 6 items
-            <p className="lg:text-3xl font-bold text-center">
-              No Recipes Found. Try searching..
-            </p>
-          )}
+          <span className=""></span>
+        ) : recipeList && recipeList.length > 0 ? (
+          <a
+            href="/recipe"
+            className="flex justify-end mb-5 font-cursive"
+            style={{ fontFamily: "cursive" }}
+          >
+            View More Recipes
+          </a>
+        ) : (
+          // Limit to top 6 items
+          <p className="lg:text-3xl font-bold text-center">
+            No Recipes Found. Try searching..
+          </p>
+        )}
       </div>
     </div>
   );

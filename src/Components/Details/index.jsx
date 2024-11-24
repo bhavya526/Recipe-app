@@ -5,7 +5,7 @@ import { FaStar } from "react-icons/fa";
 import { FaStarHalfStroke } from "react-icons/fa6";
 import receipeTop from "../../assets/receipeTop.jpg";
 import Checkbox from "react-custom-checkbox";
-import checkboximg from "../../assets/checkbox.png"
+import checkboximg from "../../assets/checkbox.png";
 
 const Details = () => {
   const { id } = useParams();
@@ -55,11 +55,13 @@ const Details = () => {
   return (
     <div>
       <div className=" container mx-auto pt-5 pb-5  relative">
-      <div className="relative">
-      <img src={receipeTop} className="w-full h-[300px] object-cover mb-5" />
-  <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
-</div>
-        
+        <div className="relative">
+          <img
+            src={receipeTop}
+            className="w-full h-[300px] object-cover mb-5"
+          />
+          <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+        </div>
 
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col  justify-center  backdrop-blur bg-black bg-opacity-50 text-white px-5 py-2">
           {recipeDetails?.recipe?.publisher}
@@ -80,7 +82,7 @@ const Details = () => {
             className="w-full h-full object-cover block  rounded-xl group-hover:scale-105 duration-300"
           />
         </div>
-        <div className="flex flex-col gap-3">
+        <div className=" px-[20px] flex flex-col gap-3">
           <div className=" flex justify-between mb-5">
             <div>
               {" "}
@@ -101,8 +103,8 @@ const Details = () => {
             </div>
           </div>
 
-          <div className="flex justify-between mb-5">
-            <div className="w-1/2">
+          <div className=" md:flex md:justify-between  mb-5">
+            <div className="md:w-1/2 w-full">
               <span className="text-xl text-left font-semibold text-black mb-5">
                 Follow the steps to make this delicious dish:
               </span>
@@ -133,16 +135,11 @@ const Details = () => {
                       <Checkbox
                         checked={false}
                         icon={
-                          <img
-                            src={checkboximg}
-                            style={{ width: 24 }}
-                            alt=""
-                          />
+                          <img src={checkboximg} style={{ width: 24 }} alt="" />
                         }
                         borderColor="#D7C629"
                         borderRadius={10}
                         size={30}
-                        
                       />
                       <li
                         key={index}

@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { GlobalContext } from "../Context";
-import { FaHome, FaSearch, FaStar,FaUtensils } from "react-icons/fa";
+import { FaHome, FaSearch, FaStar, FaUtensils } from "react-icons/fa";
 import close from "../../assets/x.svg";
 import "./index.css";
 
@@ -105,12 +105,12 @@ const Navbar = () => {
         <div className={`searchData ${isSearchOpen ? "open" : ""}`}>
           <div className="insideSearch">
             <form onSubmit={handleSubmit}>
-              <div className=" flex pt-2 pb-2 justify-center">
+              <div className=" flex pt-2 pb-2 pl-3 justify-start  md:justify-center">
                 <input
                   type="text"
                   name="search"
                   placeholder="Search Something ..."
-                  className=" p-2 px-8 border-0  outline-none lg:w-96 focus:none"
+                  className=" p-2 px-8 border-0  outline-none w-40 md:w-96 focus:none"
                   onChange={(event) => setSearchParams(event.target.value)}
                   value={searchParams}
                   autoComplete="false"
